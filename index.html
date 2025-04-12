@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Ordering System</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Tasty Bites Restaurant</h1>
+        </header>
+
+        <div class="tab-buttons">
+            <button class="tab-button active" onclick="openTab('order-tab')">Place Order</button>
+            <button class="tab-button" onclick="openTab('bill-tab')">Bill & Feedback</button>
+        </div>
+
+        <div id="order-tab" class="tab active">
+            <h2>Menu Selection</h2>
+            
+            <div class="menu-section">
+                <h3 class="menu-category">Appetizers</h3>
+                <div class="menu-item">
+                    <div class="item-name">Garlic Bread</div>
+                    <div class="item-description">Freshly baked bread with garlic butter and herbs</div>
+                    <div class="item-price">$4.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="garlic-bread" data-name="Garlic Bread" data-price="4.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Mozzarella Sticks</div>
+                    <div class="item-description">Crispy outside, melted cheese inside with marinara sauce</div>
+                    <div class="item-price">$6.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="mozzarella-sticks" data-name="Mozzarella Sticks" data-price="6.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Chicken Wings</div>
+                    <div class="item-description">Spicy buffalo wings served with blue cheese dip</div>
+                    <div class="item-price">$8.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="chicken-wings" data-name="Chicken Wings" data-price="8.99">
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="menu-category">Main Course</h3>
+                <div class="menu-item">
+                    <div class="item-name">Classic Burger</div>
+                    <div class="item-description">Juicy beef patty with cheese, lettuce, tomato, and special sauce</div>
+                    <div class="item-price">$12.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="classic-burger" data-name="Classic Burger" data-price="12.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Margherita Pizza</div>
+                    <div class="item-description">Traditional pizza with tomato sauce, fresh mozzarella, and basil</div>
+                    <div class="item-price">$14.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="margherita-pizza" data-name="Margherita Pizza" data-price="14.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Grilled Salmon</div>
+                    <div class="item-description">Fresh salmon fillet with roasted vegetables and lemon butter sauce</div>
+                    <div class="item-price">$18.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="grilled-salmon" data-name="Grilled Salmon" data-price="18.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Pasta Alfredo</div>
+                    <div class="item-description">Creamy pasta with parmesan cheese and garlic</div>
+                    <div class="item-price">$13.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="pasta-alfredo" data-name="Pasta Alfredo" data-price="13.99">
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="menu-category">Desserts</h3>
+                <div class="menu-item">
+                    <div class="item-name">Chocolate Brownie</div>
+                    <div class="item-description">Warm chocolate brownie with vanilla ice cream</div>
+                    <div class="item-price">$6.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="chocolate-brownie" data-name="Chocolate Brownie" data-price="6.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Cheesecake</div>
+                    <div class="item-description">New York style cheesecake with berry compote</div>
+                    <div class="item-price">$7.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="cheesecake" data-name="Cheesecake" data-price="7.99">
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h3 class="menu-category">Beverages</h3>
+                <div class="menu-item">
+                    <div class="item-name">Soft Drink</div>
+                    <div class="item-description">Cola, Lemon, Orange or Root Beer</div>
+                    <div class="item-price">$2.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="soft-drink" data-name="Soft Drink" data-price="2.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Fresh Juice</div>
+                    <div class="item-description">Orange, Apple or Watermelon</div>
+                    <div class="item-price">$4.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="fresh-juice" data-name="Fresh Juice" data-price="4.99">
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-name">Coffee</div>
+                    <div class="item-description">Espresso, Americano, Latte or Cappuccino</div>
+                    <div class="item-price">$3.99</div>
+                    <div class="item-quantity">
+                        <input type="number" min="0" value="0" data-id="coffee" data-name="Coffee" data-price="3.99">
+                    </div>
+                </div>
+            </div>
+
+            <button onclick="processOrder()">Place Order</button>
+        </div>
+
+        <div id="bill-tab" class="tab">
+            <h2>Your Bill</h2>
+            <div class="order-summary">
+                <table id="bill-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Unit Price</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bill-items">
+                        <!-- Items will be added here dynamically -->
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="3">Subtotal</td>
+                            <td id="subtotal">$0.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3">Tax (8%)</td>
+                            <td id="tax">$0.00</td>
+                        </tr>
+                        <tr class="total-row">
+                            <td colspan="3">Total</td>
+                            <td id="total">$0.00</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="feedback-form">
+                <h2>How was your experience?</h2>
+                <form id="feedback-form">
+                    <div>
+                        <label for="customer-name">Name:</label>
+                        <input type="text" id="customer-name" name="customer-name" required>
+                    </div>
+                    <div>
+                        <label for="customer-email">Email:</label>
+                        <input type="email" id="customer-email" name="customer-email" required>
+                    </div>
+                    <div>
+                        <label>Rate your experience:</label>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5" title="5 stars">★</label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4" title="4 stars">★</label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3" title="3 stars">★</label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2" title="2 stars">★</label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1" title="1 star">★</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="food-quality">Food Quality:</label>
+                        <select id="food-quality" name="food-quality" required>
+                            <option value="">Please select</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="average">Average</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="service">Service:</label>
+                        <select id="service" name="service" required>
+                            <option value="">Please select</option>
+                            <option value="excellent">Excellent</option>
+                            <option value="good">Good</option>
+                            <option value="average">Average</option>
+                            <option value="poor">Poor</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="comments">Additional Comments:</label>
+                        <textarea id="comments" name="comments"></textarea>
+                    </div>
+                    <button type="submit">Submit Feedback</button>
+                </form>
+                <div id="success-message" class="success-message hidden">
+                    Thank you for your feedback! Your order has been processed.
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
